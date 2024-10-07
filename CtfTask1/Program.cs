@@ -62,8 +62,7 @@ void WaitShort()
 string ExtractBinaryNumberFromResponse(string response)
 {
     var pattern = @"(\s\b[01]+\b)";
-    var extractBinaryNumberFromResponse = Regex.Match(response, pattern).ToString().Trim();
-    return extractBinaryNumberFromResponse;
+    return Regex.Match(response, pattern).ToString().Trim();
 }
 
 static string BinaryToString(string binaryString)
